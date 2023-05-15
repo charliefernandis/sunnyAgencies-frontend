@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css"
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import homePagePhoneImage from "./img2.png";
+import Typist from 'react-typist';
 import { useState ,useEffect } from "react";
 import { NavLink , useNavigate } from "react-router-dom";
 
@@ -36,7 +37,9 @@ function Home(props) {
         </header>
         <div className="homePageBody">
             <div className="leftBody">
-                <h1>Medicines accessible to all!</h1>       
+                <h1><Typist onTypingDone={() => setTimeout(quoteFunction, 8000)} avgTypingDelay={30}  key={count} >
+                    {quotes[count]}    
+                </Typist></h1>       
                 <h2><p>Click Here to Continue, </p> <NavLink to="/login"><button className="btn " >Login</button></NavLink> </h2>
             </div>
             <div className="rightBody">
