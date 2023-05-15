@@ -1,0 +1,144 @@
+
+.mrDataDisplay-Name{
+    margin: 10px 0 -70px 0;
+    color: white;
+}
+
+.mrDataDisplay-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.billDataDisplay{
+    /* display: grid; */
+    width: 75%;
+    /* padding: 20px; */
+    overflow-y: auto;
+    height: 75vh;
+    border-radius: 12px;
+    background-color: #b9f6ff;
+    margin: 100px auto;
+}
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom , rgb(2, 133, 156) , rgb(9, 84, 119));
+  }
+  
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 255, 255)
+  }
+  
+
+.tableHeading1{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom , rgb(2, 133, 156) , rgb(9, 84, 119));
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+th,
+td {
+    /* border: 1px solid black; */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    /* light blue */
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background: linear-gradient(to bottom , rgb(0, 217, 255) , rgb(0, 217, 255 , 0.1));
+    /* light green */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+    /* white */
+}
+
+.partyName1{
+    font-weight: 500
+}
+
+.card {
+    width: 400px;
+    min-height: 180px;
+    background: linear-gradient(to bottom , white , rgb(142, 202, 186));
+    border-radius: 10px;
+    box-shadow: 3px 8px 15px rgba(0, 0, 0);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    margin: 20px 0 0 0;
+    border: 0.5px solid black;
+}
+
+.header {
+    height: 60px;
+    background: linear-gradient(to bottom , blue , rgb(0, 217, 255) );
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    
+    flex-wrap:nowrap;
+    
+}
+
+.label {
+    width: 120px;
+    font-weight: bold;
+}
+
+.value {
+    display: inline-block;
+    flex-grow: 1;
+}

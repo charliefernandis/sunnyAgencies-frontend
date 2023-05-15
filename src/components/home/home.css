@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Orbitron:wght@700;800;900&family=Ubuntu&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background:linear-gradient(to bottom, rgb(11, 0, 131), rgba(54, 213, 224, 0.3) );
+    height: fit-content;
+    background-repeat: no-repeat;
+    /* max-height: 100vh; */
+    overflow-x: hidden;
+    /* width: fit-content; */
+    box-sizing: border-box;
+    width: 100vw;
+    
+}
+
+
+.left{
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    padding: 20px 50px;
+    cursor: pointer;
+}   
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right{
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+}
+
+.right li:hover{
+    background: linear-gradient(to right  , rgb(22, 255, 22) , rgba(255, 255, 255 ,1));
+    /* color: yellowgreen; */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+    font-weight: bold;
+    transition: transform 0.2s ease-out;
+}
+
+.right ul{
+    display: flex;
+    list-style: none;
+    margin: 0 80px;
+
+}
+
+.right ul li{
+    margin:25px;
+    cursor: pointer;
+}
+
+.homePageBody{
+    display: flex;   
+    justify-content: space-between;
+}
+
+.homePagePhone{
+    margin: 30px 100px;
+    position: relative;
+    /* right: 43%; */
+    /* width: max-content; */
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 12px -10px 10px rgba(0, 0, 0, 0.5) , -12px -10px 10px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* box-sizing: ; */
+}
+
+
+.homePagePhone img{
+    position: relative;
+    top:-25px;
+    /* right: 130px; */
+    /* bottom: ; */
+    /* height: 100%; */
+    /* width: 35em; */
+}
+
+.leftBody{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 120px 50px;
+    cursor: pointer;
+}
+
+.leftBody h1{
+    
+    height: 200px;
+}
+
+.leftBody h2{
+    display: flex;
+}
+
+.leftBody h2 button{
+    margin: 5px 0 0 20px;
+    height: fit-content;
+    color: black;
+    font-weight: 600;
+    
+    background: linear-gradient(to bottom , rgb(255, 255, 255), rgb(244, 219, 129)  );
+    
+}
+
+.leftBody h2 button:hover{
+    transform: scale(1.1);
+    background: linear-gradient(to top , rgba(255, 255, 255 ,1), rgb(99, 66, 149));
+    color: black;
+    transition: transform 0.2s ease-out;
+}
+
+.rightBody{
+    /* position: relative; */
+    /* right: 10%; */
+}
+
+.homeContainer{
+    height: 100vh;        
+}
+
+  @media (max-width:1017px){
+    
+    .leftBody h1{
+        /* height: max-content; */
+        width: 400px;
+        color: black;
+        padding-bottom: 100px;
+    }
+    .leftBody h2{
+        width:max-content
+
+    }
+    
+  }
+
+  @media (max-width:978px){
+    .right{
+        display: none;
+    }
+    .rightBody{
+        transform: scale(0.5);
+        position: relative;
+        /* right:100px; */
+        
+    }
+    
+  }
