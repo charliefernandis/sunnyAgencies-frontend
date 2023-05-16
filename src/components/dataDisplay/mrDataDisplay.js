@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import "./mrDataDisplay.css"
 
 function MrDataDisplay() {
-    const [data, setData] = useState("");
+    const [data, setData] = useState({});
     const { company, id } = useParams("");
     let a = {};
     async function dataFetch() {
