@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./login.css"
 import Divider from '@mui/material/Divider';
 import { NavLink, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
   const navigate = useNavigate("")  
@@ -10,17 +11,36 @@ function Login() {
 
   const submitForm = async(e)=>{
     e.preventDefault();
-    const res = await fetch("mr/login" , {
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify({email , password})
-    })
-    const data = await res.json();
-    if(res.status ===201){
-      navigate("/mr/details/"+(data["company"].replace(" ","-"))+"/"+(data["_id"].replace(" ","-")))
-    }
+    // const res = await fetch("mr/login" , {
+    //   method:"POST",
+    //   headers:{
+    //     "Content-Type":"application/json"
+    //   },
+    //   body:JSON.stringify({email , password})
+    // })
+    // const data = await res.json();
+    const data = {email , password};
+    try {
+      const response = await axios.post("mr/login", data, {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+    
+      // Handle the response data
+      if(response.data){
+        navigate("/mr/details/"+(response.data["company"].replace(" ","-"))+"/"+(response.data["_id"].replace(" ","-")))
+
+      }
+    } catch (error) {
+      // Handle any errors
+      console.error(error);
+    }    
+
+    // if(res.status ===201){
+    //   navigate("/mr/details/"+(data["company"].replace(" ","-"))+"/"+(data["_id"].replace(" ","-")))
+    //   // console.log(data);
+    // }
     setTimeout(() => {
       
     setEmail("");

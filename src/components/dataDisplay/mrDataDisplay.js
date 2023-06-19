@@ -15,6 +15,7 @@ function MrDataDisplay() {
         })
         const data1 = await res.json();
         // setData(data);
+        console.log(data1);
         if (res.status !== 200) {
             console.log("no data found");
         }
@@ -24,8 +25,8 @@ function MrDataDisplay() {
         }
     }
     useEffect(() => { dataFetch() }, [])         // 4/5/23 :- useState re-renders the function everytime when we try to set the value using the setState function. This may cause function to be called repeatedly . to avoid this situation , useEffect is used. useEffect takes two functions , the first function tells what to execute and second one tells when to execute.  
-    console.log(data);
-    if (data) {
+    console.log();
+    if ((Object.keys(data).length!==0)) {
         return <div className="mrDataDisplay-Container">
             <div className="card" onclick="location.href='/dataAnalysis'">
         <div className="header" >
@@ -94,7 +95,6 @@ function MrDataDisplay() {
                 </table>
             </div></div>
     }
-    // return <h1>{indData["data"]}</h1>
 }
 
 export default MrDataDisplay;
